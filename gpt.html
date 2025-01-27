@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Foto60 Shop - Плакаты и Фотографии</title>
+   <link rel="stylesheet" href="gpt.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+      <script src="gpt.js"></script>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <h1 class="logo">Foto60 Shop</h1>
+         <nav>
+            <button id="cart-btn" class="cart-button">Корзина (0)</button>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="container">
+         <section class="hero">
+            <h2>Найдите свой идеальный плакат</h2>
+            <p>Разнообразие стилей и тем для любого события.</p>
+         </section>
+         <section id="product-list">
+            <!-- Товары будут добавляться сюда -->
+         </section>
+      </div>
+   </main>
+   <div id="cart" class="hidden">
+      <h2>Корзина</h2>
+      <ul id="cart-items">
+         <!-- Товары в корзине будут добавляться сюда -->
+      </ul>
+      <p>Итого: $<span id="total">0</span></p>
+      <button id="checkout-btn" class="checkout-button">Оформить заказ</button>
+   </div>
+   <footer>
+      <div class="container">
+         <p>&copy; 2025 Foto60 Shop. Все права защищены.</p>
+      </div>
+   </footer>
+   <script src="script.js"></script>
+</body>
+
+</html>
