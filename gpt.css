@@ -5,29 +5,30 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    padding-top: 60px; /* Отступ для фиксированного заголовка */
+    padding-top: 60px;
+    /* Отступ для фиксированного заголовка */
 }
 
 
- /* Светлая тема (по умолчанию) */
- body {
-     background-color: #fff;
-     color: #333;
- }
+/* Светлая тема (по умолчанию) */
+body {
+    background-color: #fff;
+    color: #333;
+}
 
- /* Темная тема */
- body.dark-theme {
-     background-color: #333;
-     color: #fff;
- }
-
+/* Темная тема */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    justify-content: space-between;
 }
+
 
 header {
     color: white;
@@ -43,9 +44,19 @@ header {
     left: 0;
     width: 100%;
     background-color: #db34cd;
-    padding: 10px 0;
+    padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* Расстояние между кнопками */
 }
 
 header .logo {
@@ -54,8 +65,15 @@ header .logo {
     font-size: 1.3rem;
 }
 
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
 .small {
-   font-size: 0.1em;
+    font-size: 0.1em;
 }
 
 nav {
@@ -64,6 +82,7 @@ nav {
     justify-content: space-between;
     width: 100%;
 }
+
 #search-form {
     display: flex;
     justify-content: center;
@@ -93,6 +112,10 @@ nav {
     background-color: #1c628c;
 }
 
+.discount-btn:hover {
+    background-color: #e68a3b;
+}
+
 .open-sidebar-btn {
     background: none;
     border: none;
@@ -107,9 +130,16 @@ nav {
     /* Позиция от правого края */
     z-index: 1001;
 }
+
+.toast-container {
+    z-index: 2000;
+    /* Убедитесь, что уведомление поверх всего */
+}
+
 main {
     padding: 2rem 0;
 }
+
 /* Кнопки управления количеством */
 .quantity-selector {
     display: flex;
@@ -155,6 +185,7 @@ main {
 .remove-from-cart:hover {
     background-color: #c0392b;
 }
+
 .hero {
     text-align: center;
     margin-bottom: 3rem;
@@ -230,7 +261,8 @@ main {
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
-    z-index: 2000; /* Убедитесь, что корзина поверх всего */
+    z-index: 2000;
+    /* Убедитесь, что корзина поверх всего */
 }
 
 #cart.hidden {
@@ -318,6 +350,7 @@ footer {
     right: 10px;
 }
 
+/* Боковая панель */
 .sidebar {
     width: 250px;
     background-color: #333;
@@ -329,7 +362,8 @@ footer {
     height: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    z-index: 3000; /* Убедитесь, что боковая панель поверх всего */
+    z-index: 3000;
+    /* Убедитесь, что панель поверх всего */
 }
 
 .sidebar.open {
@@ -339,18 +373,30 @@ footer {
 .sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.sidebar ul li {
+.sidebar li {
     margin: 15px 0;
 }
 
-.sidebar ul li a {
+.sidebar a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.sidebar .close-btn {
+.sidebar a:hover {
+    color: #e67e22;
+}
+
+.sidebar .small {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.close-btn {
     background: none;
     border: none;
     color: #fff;
@@ -359,4 +405,4 @@ footer {
     position: absolute;
     top: 10px;
     right: 10px;
-}
+    }
