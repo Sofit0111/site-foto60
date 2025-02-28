@@ -1,14 +1,11 @@
-/* gpt.css */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    padding-top: 60px;
-    /* Отступ для фиксированного заголовка */
+    padding-top: 1.5rem;
 }
-
 
 /* Светлая тема (по умолчанию) */
 body {
@@ -27,15 +24,125 @@ body.dark-theme {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+    /* Очищаем обтекание */
+}
+
+.footer-section {
+    float: left;
+    width: 30%;
+    /* Ширина каждой секции */
+    margin-right: 5%;
+    /* Расстояние между секциями */
+}
+
+.footer-section:last-child {
+    margin-right: 0;
+    /* Убираем отступ у последней секции */
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #e67e22;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.subscribe-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.subscribe-form button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+    background-color: #c06018;
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer-bottom p {
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 
 header {
-    color: white;
-    padding: 1rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+    background-color: #db34cd;
+}
+
+.scroll-to-top-btn {
+    background-color: #24c1cf;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.scroll-to-top-btn:hover {
+    background-color: #1c628c;
 }
 
 .fixed-header {
@@ -56,13 +163,6 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    /* Расстояние между кнопками */
-}
-
-header .logo {
-    color: dark;
-    margin: 0;
-    font-size: 1.3rem;
 }
 
 .logo {
@@ -72,8 +172,16 @@ header .logo {
     margin: 0;
 }
 
+header .logo {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .small {
-    font-size: 0.1em;
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
 nav {
@@ -84,9 +192,10 @@ nav {
 }
 
 #search-form {
+    z-index: 1;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
 }
 
 #search-input {
@@ -94,7 +203,6 @@ nav {
     padding: 0.5rem;
     font-size: 1rem;
 }
-
 
 .cart-button {
     background-color: #24c1cf;
@@ -120,24 +228,20 @@ nav {
     background: none;
     border: none;
     color: white;
-    font-size: 24px;
+    font-size: 36px;
     cursor: pointer;
     position: fixed;
-    /* Звфиксированно */
     top: 10px;
-    /* Позиция   */
     right: 10px;
-    /* Позиция от правого края */
     z-index: 1001;
 }
 
 .toast-container {
     z-index: 2000;
-    /* Убедитесь, что уведомление поверх всего */
 }
 
 main {
-    padding: 2rem 0;
+    padding-top: 80px;
 }
 
 /* Кнопки управления количеством */
@@ -262,7 +366,6 @@ main {
     transition: transform 0.3s ease-in-out;
     overflow-y: auto;
     z-index: 2000;
-    /* Убедитесь, что корзина поверх всего */
 }
 
 #cart.hidden {
@@ -273,36 +376,15 @@ main {
     margin-bottom: 1.5rem;
 }
 
-#cart-items li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
-}
-
-.remove-from-cart {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
-}
-
-.remove-from-cart:hover {
-    background-color: #c0392b;
-}
-
 #cart-items {
     list-style: none;
     padding: 0;
 }
 
 #cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #eee;
@@ -334,7 +416,7 @@ main {
 
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
     background-color: #333;
     color: white;
 }
@@ -342,8 +424,8 @@ footer {
 .close-btn {
     background: none;
     border: none;
-    color: #333;
-    font-size: 24px;
+    color: rgb(0, 0, 0);
+    font-size: 2.2rem;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -363,7 +445,6 @@ footer {
     transform: translateX(100%);
     transition: transform 0.3s ease;
     z-index: 3000;
-    /* Убедитесь, что панель поверх всего */
 }
 
 .sidebar.open {
@@ -390,19 +471,3 @@ footer {
 .sidebar a:hover {
     color: #e67e22;
 }
-
-.sidebar .small {
-    font-size: 0.9rem;
-    color: #ccc;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    }
