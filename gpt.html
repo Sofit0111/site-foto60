@@ -22,28 +22,18 @@
 <body>
 <header class="fixed-header" id="bobr">
     <div class="container">
-        <!-- Логотип -->
         <h1 class="logo">Foto60 Shop</h1>
-
-        <!-- Навигация -->
         <nav class="header-nav">
-            <!-- Кнопка корзины -->
             <button id="cart-btn" class="cart-button" aria-label="Открыть корзину">
                 Корзина (0)
             </button>
-
-            <!-- Кнопка скидки -->
             <button type="button" class="btn btn-primary discount-btn" id="liveToastBtn" aria-label="Получить скидку">
                 Получить скидку
             </button>
-
-            <!-- Кнопка меню -->
             <button id="open-sidebar-btn" class="open-sidebar-btn" aria-label="Открыть меню">
                 ☰
             </button>
         </nav>
-
-        <!-- Уведомление о скидке -->
         <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="toast-header">
@@ -59,43 +49,50 @@
             </div>
         </div>
     </div>
-
     <!-- Скрипт для уведомления -->
     <script>
         const toastTrigger = document.getElementById('liveToastBtn');
         const toastLiveExample = document.getElementById('liveToast');
-
         if (toastTrigger) {
             const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
             toastTrigger.addEventListener('click', () => {
                 toastBootstrap.show();
             });
         }
+
+        // Скрипт для кнопки "Домика"
+        const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+        if (scrollToTopBtn) {
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
 </header>
-<aside class="sidebar" id="sidebar">
-    <!-- Кнопка закрытия -->
-    <button class="close-btn" id="close-sidebar-btn" aria-label="Закрыть меню">×</button>
 
-    <!-- Список ссылок -->
-    <ul class="sidebar-menu">
-        <li><a href="#" class="sidebar-link">Детский праздник</a></li>
-        <li>
-            <a href="https://vk.com/foto60?ref=group_menu&w=app6326142_-12205895" target="_blank"
-                class="sidebar-link small">
-                Детский праздник (VK)
-            </a>
-        </li>
-        <li><a href="#" class="sidebar-link">О нас</a></li>
-        <li><a href="#" class="sidebar-link">Контакты</a></li>
-        <li class="nav-item">
-            <a class="nav-link sidebar-link" href="https://vk.com/foto60?ref=group_menu&w=app6326142_-12205895"
-                target="_blank">
-                Отзывы
-            </a>
-        </li>
-    </ul>
-</aside>
+    <aside class="sidebar" id="sidebar">
+        <!-- Кнопка закрытия -->
+        <button class="close-btn" id="close-sidebar-btn" aria-label="Закрыть меню">×</button>
+
+        <!-- Список ссылок -->
+        <ul class="sidebar-menu">
+            <li><a href="#" class="sidebar-link">Детский праздник</a></li>
+            <li>
+                <a href="https://vk.com/foto60?ref=group_menu&w=app6326142_-12205895" target="_blank"
+                    class="sidebar-link small">
+                    Детский праздник (VK)
+                </a>
+            </li>
+            <li><a href="#" class="sidebar-link">О нас</a></li>
+            <li><a href="#" class="sidebar-link">Контакты</a></li>
+            <li class="nav-item">
+                <a class="nav-link sidebar-link" href="https://vk.com/foto60?ref=group_menu&w=app6326142_-12205895"
+                    target="_blank">
+                    Отзывы
+                </a>
+            </li>
+        </ul>
+    </aside>
     <main>
         <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
             <div class="container-fluid">
@@ -110,7 +107,10 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Как заказать</a>
                         </li>
-                                                <li class="nav-item dropdown">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://vk.com/foto60?ref=group_menu&w=app6326142_-12205895" target="_blank">Отзывы</a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Цены
@@ -150,15 +150,39 @@
         <p>Итого: $<span id="total">0</span></p>
         <button id="checkout-btn" class="checkout-button">Оформить заказ</button>
     </div>
-    <footer>
-        <div class="container">
-            <p>Контакты</p>
-            <p></p>
+<footer>
+    <div class="container">
+        <div class="footer-section">
+            <h4>Контакты</h4>
+            <p>Email: info@foto60shop.com</p>
+            <p>Телефон: +7 (424) 242-42-42</p>
+            <p>Адрес: г. Псков, ул. Пушкина, д. 42</p>
         </div>
+        <div class="footer-section">
+            <h4>Информация</h4>
+            <p>Если у вашего ребенка скоро день рождения, или у близкого человека юбилей, то вы можете заказать у меня плакат. На сайте
+            представлены различные образцы плакатов для праздника. Если Вы хотите индивидуальный дизайн плаката, и у Вас есть
+            собственные задумки, я помогу Вам их воплотить. Для этого присылайте свои идеи, примеры ко мне на почту
+            zakazfoto60@mail.ru
+            
+            Также Вы можете заказать много интересных сувениров с Вашими фотографиями: магниты, брелоки, подвески на телефон,
+            блокноты, тетради, календари, закладки.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Подписка</h4>
+            <p>Подпишитесь на наши новости и акции:</p>
+            <form class="subscribe-form">
+                <input type="email" placeholder="Введите ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
         <div class="container">
             <p>&copy; 2025 Foto60 Shop. Все права защищены.</p>
         </div>
-    </footer>
+    </div>
+</footer>
     <script src="sitefoto60.js"></script>
 </body>
 
