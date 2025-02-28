@@ -57,7 +57,7 @@
                 name: 'Плакаты на 14 лет',
                 price: 18,
                 image: 'https://sun9-30.userapi.com/s/v1/ig2/he--xw6uEI8TEZyl-C-YB31h82ixE49dDAk72xq82WRt-325ep1CfFx9laBf_VkttA_l-rJ0c0cGYcQ2pZYLFYpp.jpg?quality=95&as=32x23,48x34,72x51,108x76,160x113,240x170,360x255,480x339,540x382,640x452,720x509,1000x707&from=bu&u=_b2cDP6b1wprWNCL6ZfbDWFCh9vA3rCTsOyCvP2NUqI&cs=807x571',
-                description: 'Плакат с поздравлением.'
+                description: 'Плакат с поздравлением на значимую дату.'
             }
         ];
 
@@ -185,3 +185,4 @@
 
         renderProducts();
     });
+
