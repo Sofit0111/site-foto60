@@ -19,10 +19,12 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
-<header class="fixed-header" id="bobr">
+<body id="top">
+<header class="fixed-header">
     <div class="container">
-        <h1 class="logo">Foto60 Shop</h1>
+        <h1 class="logo">
+                <a href="#" id="logo-link">Foto60 Shop</a>
+            </h1>
         <nav class="header-nav">
             <button id="cart-btn" class="cart-button" aria-label="Открыть корзину">
                 Корзина (0)
@@ -124,9 +126,9 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search" id="search-form">
-                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск"
+                        <input class="form-control me-2" type="search" placeholder="Найти плакат" aria-label="Поиск"
                             id="search-input">
-                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                        <button class="btn btn-outline-success" type="submit">Найти</button>
                     </form>
                 </div>
             </div>
