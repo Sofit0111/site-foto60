@@ -19,6 +19,15 @@ body.dark-theme {
     color: #fff;
 }
 
+#logo-link{
+    color: rgb(255, 255, 255);
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -110,7 +119,7 @@ body.dark-theme {
 }
 
 .footer-bottom {
-    background-color: #222;
+    background-color:#00012e;
     padding: 1rem 0;
     margin-top: 2rem;
 }
@@ -126,7 +135,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #db34cd;
+    background-color: #222;
+    /* Темный заголовок */
+    color: #f4f4f4;
 }
 
 .scroll-to-top-btn {
@@ -150,7 +161,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #db34cd;
+    background-color: #00012e;
     padding: 1rem 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -166,7 +177,7 @@ header {
 }
 
 .logo {
-    color: white;
+    color: #f4f4f4;
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
@@ -191,6 +202,33 @@ nav {
     width: 100%;
 }
 
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ccc;
+    /* Серый при наведении */
+}
+
+button {
+    background-color: #333;
+    color: #f4f4f4;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #444;
+    /* Темнее при наведении */
+}
+
 #search-form {
     z-index: 1;
     display: flex;
@@ -202,6 +240,10 @@ nav {
     width: 300px;
     padding: 0.5rem;
     font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: #fe0909;
+    border: 1px solid rgb(51, 50, 50);
+    border-radius: 4px;
 }
 
 .cart-button {
@@ -351,7 +393,7 @@ main {
 }
 
 .add-to-cart:hover {
-    background-color: #1f8b4d;
+    background-color: rgb(6, 55, 230);
 }
 
 #cart {
@@ -387,7 +429,7 @@ main {
     align-items: center;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #444;
 }
 
 #cart p {
@@ -417,15 +459,15 @@ main {
 footer {
     text-align: center;
     padding: 2rem 0;
-    background-color: #333;
-    color: white;
+    background-color: #00012e;
+    color:#f4f4f4;
 }
 
 .close-btn {
     background: none;
     border: none;
     color: rgb(0, 0, 0);
-    font-size: 2.2rem;
+    font-size: 2rem;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -435,7 +477,7 @@ footer {
 /* Боковая панель */
 .sidebar {
     width: 250px;
-    background-color: #333;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     padding: 20px;
     position: fixed;
@@ -444,7 +486,7 @@ footer {
     height: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    z-index: 3000;
+    z-index: 1999;
 }
 
 .sidebar.open {
@@ -466,6 +508,10 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #e67e22;
 }
 
 .sidebar a:hover {
