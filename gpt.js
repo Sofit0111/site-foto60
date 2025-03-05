@@ -16,6 +16,19 @@
         let cartItemsArray = [];
         let totalPrice = 0;
 
+        document.getElementById('logo-link').addEventListener('click', function (event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    scrollToTop();
+});
+
+// Функция для плавной прокрутки вверх
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Плавная анимация
+    });
+}
+
         const products = [
             {
                 id: 1,
@@ -182,6 +195,9 @@
             document.querySelector('.nav-link.active').classList.remove('active');
             homeBtn.classList.add('active');
         });
+
+        renderProducts();
+    });
 
         renderProducts();
     });
