@@ -198,7 +198,3 @@ function scrollToTop() {
 
         renderProducts();
     });
-
-        renderProducts();
-    });
-
