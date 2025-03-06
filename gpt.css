@@ -269,13 +269,21 @@ button:hover {
 .open-sidebar-btn {
     background: none;
     border: none;
+    box-shadow: 0px 54px 10px rgba(0, 0, 0, 0.1);
     color: white;
-    font-size: 36px;
+    font-size:  36px;
     cursor: pointer;
     position: fixed;
+    transition: background-color 0.3s ease;
     top: 10px;
     right: 10px;
     z-index: 1001;
+}
+
+.open-sidebar-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+
 }
 
 .toast-container {
@@ -466,12 +474,18 @@ footer {
 .close-btn {
     background: none;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1px;
+    right: 1px;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+
 }
 
 /* Боковая панель */
@@ -508,10 +522,6 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
-}
-
-.sidebar a:hover {
-    color: #e67e22;
 }
 
 .sidebar a:hover {
